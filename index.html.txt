@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Appa’s 70th Birthday</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Outfit:wght@500;700;800&family=Noto+Sans+Tamil:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff4e2;--glass:rgba(255,255,255,.62);--ink:#2d1218;--mute:#7d5a4c;--acc:#d6336c;--gold:#ff9f1c;--line:rgba(120,50,40,.16);--shadow:0 8px 30px rgba(180,60,40,.16);--b1:#ff9f1c;--b2:#ff4d6d;--b3:#c9184a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#180b10;--glass:rgba(255,255,255,.07);--ink:#fdebd9;--mute:#c9a58f;--acc:#ff6b8b;--gold:#ffb347;--line:rgba(255,200,160,.16);--shadow:0 8px 30px rgba(0,0,0,.45)}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "Noto Sans Tamil",system-ui,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:-20% -10% auto;height:70vh;background:radial-gradient(40% 50% at 20% 30%,rgba(255,159,28,.35),transparent),radial-gradient(40% 50% at 80% 20%,rgba(255,77,109,.3),transparent),radial-gradient(35% 45% at 55% 70%,rgba(201,24,74,.22),transparent);filter:blur(30px);z-index:-1;animation:drift 18s ease-in-out infinite alternate}
+h1,h2,.serif{font-family:"Outfit","Noto Sans Tamil",sans-serif;margin:0}
+header{position:relative;text-align:center;padding:56px 18px 30px;overflow:hidden}
+.kick{display:inline-block;font:700 12px Outfit,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--acc);border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(10px);border-radius:99px;padding:6px 16px}
+header h1{font-size:clamp(40px,10vw,88px);font-weight:800;line-height:1.02;margin:14px 0 0;letter-spacing:-.03em}
+header h1 em{font:italic 700 1em "Playfair Display",serif;background:linear-gradient(100deg,var(--b1),var(--b2),var(--b3),var(--b1));background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+.big{display:inline-block;font-size:clamp(90px,26vw,200px);font-weight:800;line-height:.95;letter-spacing:-.05em;background:linear-gradient(120deg,var(--b1),var(--b2) 50%,var(--b3));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 10px 24px rgba(255,77,109,.35));animation:bob 4s ease-in-out infinite}
+header p{color:var(--mute);font-size:18px;margin:6px 0 16px}
+.cel{font:700 15px Outfit,sans-serif;border:0;color:#fff;background:linear-gradient(120deg,var(--b1),var(--b2));padding:12px 26px;border-radius:99px;cursor:pointer;box-shadow:0 8px 22px rgba(255,77,109,.4);transition:.2s}.cel:hover{transform:translateY(-3px) scale(1.05)}
+.mq{overflow:hidden;white-space:nowrap;border-block:1px solid var(--line);background:var(--glass);padding:9px 0;margin-top:26px}
+.mq span{display:inline-block;padding-left:100%;animation:mq 28s linear infinite;font:700 14px Outfit,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--acc)}
+nav{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:20;display:flex;gap:4px;padding:6px;border-radius:99px;background:var(--glass);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border:1px solid var(--line);box-shadow:var(--shadow);max-width:96vw}
+nav button{background:none;border:0;color:var(--ink);padding:10px 14px;border-radius:99px;font:700 13px Outfit,"Noto Sans Tamil",sans-serif;cursor:pointer;transition:.25s;white-space:nowrap}
+nav button:hover{background:var(--line)}nav button.on{background:linear-gradient(120deg,var(--b1),var(--b2));color:#fff;box-shadow:0 4px 14px rgba(255,77,109,.45)}
+main{max-width:1000px;margin:0 auto;padding:30px 18px 130px}.tab{display:none}.tab.on{display:block;animation:rise .5s cubic-bezier(.2,.8,.2,1) both}
+h2{font-size:clamp(30px,6vw,48px);font-weight:800;letter-spacing:-.02em}h2::after{content:"";display:block;width:64px;height:5px;border-radius:9px;background:linear-gradient(90deg,var(--b1),var(--b2));margin-top:8px}.sub{color:var(--mute);margin:12px 0 22px}
+.card,.ev>div.in{background:var(--glass);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
+.card{padding:18px 20px;margin-bottom:14px;overflow-wrap:anywhere;transition:.3s cubic-bezier(.2,.8,.2,1);animation:rise .5s ease both}.card:hover{transform:translateY(-4px) rotate(-.4deg);box-shadow:0 16px 38px rgba(255,77,109,.25)}
+.who{font:700 18px Outfit,sans-serif;color:var(--acc)}.tag{font:600 11px Outfit,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:linear-gradient(120deg,rgba(255,159,28,.28),rgba(255,77,109,.22));border-radius:99px;padding:3px 10px;margin-left:6px;color:var(--ink)}
+.card p{margin:8px 0 0;white-space:pre-wrap}video,audio,.card img{width:100%;max-width:100%;margin-top:10px;border-radius:16px}
+form{display:grid;gap:10px}input,textarea,select,button.pri{font:inherit;color:var(--ink);background:var(--glass);border:1px solid var(--line);border-radius:14px;padding:11px 12px;width:100%}input:focus,textarea:focus,select:focus{outline:2px solid var(--b2)}
+button.pri{background:linear-gradient(120deg,var(--b1),var(--b2));color:#fff;border:0;cursor:pointer;font:700 15px Outfit,sans-serif;transition:.2s}button.pri:hover{transform:scale(1.02);filter:brightness(1.08)}button:disabled{opacity:.5}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:520px){.row{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}.chip{border:1px solid var(--line);background:var(--glass);border-radius:99px;padding:6px 16px;font:600 13px Outfit,sans-serif;cursor:pointer;transition:.2s}.chip:hover{transform:translateY(-2px);border-color:var(--b2)}.chip.on{background:linear-gradient(120deg,var(--b1),var(--b2));color:#fff;border-color:transparent}
+.collage{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:130px;gap:10px;grid-auto-flow:dense}
+.collage>div{border-radius:22px;overflow:hidden;background:linear-gradient(135deg,rgba(255,159,28,.25),rgba(255,77,109,.2));border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--mute);font:600 13px Outfit,sans-serif;transition:.4s cubic-bezier(.2,.8,.2,1);animation:rise .6s ease both}
+.collage>div:hover{transform:scale(1.06) rotate(-1.5deg);z-index:2;box-shadow:0 18px 36px rgba(255,77,109,.35)}
+.collage>div:nth-child(5n+1){grid-row:span 2}.collage>div:nth-child(7n+3){grid-column:span 2}.collage img,.collage video{width:100%;height:100%;object-fit:cover;margin:0;border-radius:0}
+@media(max-width:600px){.collage{grid-template-columns:repeat(2,1fr)}}
+.tl{border-left:3px dashed var(--b2);margin-left:10px;padding-left:24px}.ev{position:relative;margin-bottom:28px;padding:16px 18px;background:var(--glass);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);animation:rise .6s ease both;transition:.3s}.ev:hover{transform:translateX(6px)}
+.ev::before{content:"";position:absolute;left:-36px;top:22px;width:18px;height:18px;border-radius:50%;background:linear-gradient(120deg,var(--b1),var(--b2));border:3px solid var(--bg);animation:pulse 2.4s ease-out infinite}
+.yr{font:800 34px Outfit,sans-serif;line-height:1.1;background:linear-gradient(120deg,var(--b1),var(--b3));-webkit-background-clip:text;background-clip:text;color:transparent}.ev .t{font-weight:700}
+.grid70{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));grid-auto-flow:dense;gap:12px}
+.sn{border-radius:24px;padding:16px;min-height:150px;color:#fff;position:relative;display:flex;flex-direction:column;justify-content:flex-end;transition:.35s cubic-bezier(.2,.8,.2,1);animation:rise .5s ease both;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.14)}
+.sn:nth-child(7n+1){grid-column:span 2}.sn:nth-child(9n+4){grid-row:span 2}
+.sn:hover{transform:translateY(-8px) rotate(-1.5deg) scale(1.04);box-shadow:0 20px 40px rgba(0,0,0,.28)}.sn::before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.14);top:-40px;left:-30px}
+.sn b{position:absolute;top:2px;right:14px;font:800 56px Outfit,sans-serif;opacity:.28}.sn small{font:700 10px Outfit,sans-serif;letter-spacing:.16em;text-transform:uppercase;opacity:.9}.sn div{font-size:15px;line-height:1.4;margin-top:4px;font-weight:600}.sn.ph{opacity:.7}.sn.ed{cursor:pointer}
+.c0{background:linear-gradient(135deg,#ff4d6d,#c9184a)}.c1{background:linear-gradient(135deg,#ff9f1c,#ff6b35)}.c2{background:linear-gradient(135deg,#7b2cbf,#c9184a)}.c3{background:linear-gradient(135deg,#f77f00,#d62828)}.c4{background:linear-gradient(135deg,#ff758f,#ff9e00)}.c5{background:linear-gradient(135deg,#9d0208,#e85d04)}
+.empty{color:var(--mute);text-align:center;padding:24px;border:2px dashed var(--line);border-radius:22px}details{margin:16px 0}summary{cursor:pointer;color:var(--acc);font:700 15px Outfit,sans-serif}
+dialog{border:1px solid var(--line);border-radius:22px;background:var(--bg);color:var(--ink);width:min(440px,92vw)}
+.adm{display:none}.canedit .adm{display:block}
+footer{text-align:center;color:var(--mute);padding:0 20px 110px}
+.cf{position:fixed;top:-20px;font-size:24px;z-index:50;pointer-events:none;animation:fall var(--d) linear forwards}
+@keyframes rise{from{opacity:0;transform:translateY(22px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes shine{to{background-position:-250% 0}}@keyframes bob{50%{transform:translateY(-10px) rotate(-1.5deg)}}
+@keyframes drift{to{transform:translate(4%,6%) scale(1.1)}}@keyframes mq{to{transform:translateX(-100%)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,77,109,.6)}100%{box-shadow:0 0 0 14px rgba(255,77,109,0)}}
+@keyframes fall{to{transform:translate(var(--x),110vh) rotate(720deg)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.cf{display:none}}
+</style></head><body>
+<header><div class="kick">Celebrating</div><div><span class="big serif" id="cnt">70</span></div><h1>Happy Birthday, <em>Appa</em></h1><p>வாழ்த்துகள் அப்பா! Seven decades of love, lessons and laughter.</p><button class="cel" id="boom">🎉 Celebrate</button>
+<div class="mq"><span>Happy 70th Appa ✦ வாழ்த்துகள் ✦ 70 years of you ✦ Love, laughter &amp; blessings ✦ பிறந்தநாள் நல்வாழ்த்துகள் ✦ Cheers to Appa ✦</span></div></header>
+<nav id="nav"><button data-t="t1" class="on">🖼 Collage</button><button data-t="t2">🕰 Journey</button><button data-t="t3">✨ Appa 70</button><button data-t="t4">💌 Wishes</button></nav>
+<main>
+<div id="t1" class="tab on"><h2>The Collage</h2><p class="sub">A mosaic of Appa’s life in pictures.</p>
+<div class="collage" id="collage"></div>
+<details class="adm"><summary>＋ Add photos to collage</summary><form id="cForm" class="card"><input id="cFile" type="file" accept="image/*,video/*" multiple required><button class="pri">Add</button></form></details></div>
+
+<div id="t2" class="tab"><h2>70 Years, One Journey</h2><p class="sub">Personal and professional milestones, in pictures and video.</p>
+<div class="chips" id="tlChips"><span class="chip on" data-k="">All</span><span class="chip" data-k="Personal">Personal</span><span class="chip" data-k="Professional">Professional</span></div>
+<div class="tl" id="tlList"></div>
+<details class="adm"><summary>＋ Add a milestone</summary><form id="tlForm" class="card">
+<div class="row"><input id="tYear" placeholder="Year (e.g. 1979)" required maxlength="10"><select id="tKind"><option>Personal</option><option>Professional</option></select></div>
+<input id="tTitle" placeholder="Title" required maxlength="120"><textarea id="tText" rows="3" placeholder="Story behind it" maxlength="1500"></textarea>
+<input id="tFile" type="file" accept="image/*,video/*"><button class="pri">Add to timeline</button></form></details></div>
+
+<div id="t3" class="tab"><h2>Appa 70</h2><p class="sub">Seventy things that make Appa, Appa: qualities, achievements, sayings and memories.</p><div class="grid70" id="g70"></div></div>
+
+<div id="t4" class="tab"><h2>Wishes · வாழ்த்துகள்</h2><p class="sub">Everything sent to Appa, in one place. Categories are a work in progress.</p>
+<div class="chips" id="catChips"></div><div class="chips" id="typeChips"></div>
+<div id="wishList"></div>
+<details><summary>＋ Add a wish</summary><form id="wishForm" class="card">
+<div class="row"><input id="wName" placeholder="Your name / உங்கள் பெயர்" required maxlength="80"><select id="wCat"></select></div>
+<div class="row"><select id="wLang"><option>English</option><option>தமிழ் (Tamil)</option></select><input id="wFile" type="file" accept="audio/*,video/*,image/*"></div>
+<textarea id="wText" rows="4" placeholder="Your message… / உங்கள் வாழ்த்து…" maxlength="2000"></textarea>
+<small class="sub">Optional audio, video or photo up to 20 MB.</small><button class="pri">Send wishes 🎉</button></form></details></div>
+</main>
+<footer>Made with love for Appa’s 70th ❖ 2026</footer>
+<dialog id="dlg"><form id="sForm" method="dialog"><b id="sNum"></b><select id="sKind"><option>Quality</option><option>Achievement</option><option>Saying</option><option>Habit</option><option>Memory</option></select>
+<textarea id="sText" rows="4" maxlength="220" placeholder="One short snippet about Appa" required></textarea><button class="pri">Save</button></form></dialog>
+
+<script>
+const $=id=>document.getElementById(id),CATS=["Family","Relatives","Friends","Work colleagues","Neighbours","Other"];
+let db=null,assets=null,edit=false,S={tl:[],wish:[],col:[],sn:{}},tlK="",wc="",wt="";
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const mtype=m=>!m?"":(m.type||"").startsWith("video")?"Video":(m.type||"").startsWith("audio")?"Audio":(m.type||"").startsWith("image")?"Photo":"";
+function media(m){if(!m||!m.url)return"";const t=mtype(m),u=esc(m.url);return t=="Video"?`<video controls preload="metadata" src="${u}"></video>`:t=="Audio"?`<audio controls src="${u}"></audio>`:t=="Photo"?`<img loading="lazy" src="${u}" alt="">`:"";}
+const rows=s=>(s.docs||[]).map(d=>({id:d.id,...d.data()}));
+async function up(f){if(!f)return null;if(!assets)throw new Error("Uploads unavailable");const r=await assets.upload(f);return{url:r.url,type:f.type||r.contentType};}
+function bind(form,fn){form.addEventListener("submit",async e=>{e.preventDefault();const b=form.querySelector("button.pri");b.disabled=true;
+ try{await fn();form.reset();}catch(x){alert("Could not save: "+(x.message||x.code||"try again"));}b.disabled=false;});}
+document.querySelectorAll("#nav button").forEach(b=>b.onclick=()=>{document.querySelectorAll("#nav button,.tab").forEach(e=>e.classList.remove("on"));b.classList.add("on");$(b.dataset.t).classList.add("on");scrollTo(0,0);});
+function chips(el,list,cur,set){el.innerHTML=list.map(([k,l])=>`<span class="chip${k==cur?" on":""}" data-k="${esc(k)}">${esc(l)}</span>`).join("");el.querySelectorAll(".chip").forEach(c=>c.onclick=()=>{set(c.dataset.k);});}
+function rCollage(){const n=Math.max(12,S.col.length);let h="";for(let i=0;i<n;i++){const m=S.col[i]&&S.col[i].media;h+=`<div>${m?media(m).replace(" controls",' muted autoplay loop playsinline'):"Photo "+(i+1)}</div>`;}$("collage").innerHTML=h;}
+function rTl(){chips($("tlChips"),[["","All"],["Personal","Personal"],["Professional","Professional"]],tlK,k=>{tlK=k;rTl();});
+ const r=S.tl.filter(e=>!tlK||e.kind==tlK);$("tlList").innerHTML=r.length?r.map(e=>`<div class="ev"><div class="yr serif">${esc(e.year)}</div><div class="t">${esc(e.title)}<span class="tag">${esc(e.kind)}</span></div><p>${esc(e.text)}</p>${media(e.media)}</div>`).join(""):'<div class="empty">Milestones with photos and videos will appear here.</div>';}
+function r70(){let h="";for(let n=1;n<=70;n++){const s=S.sn[n];h+=`<div class="sn c${n%6}${s?"":" ph"}${edit?" ed":""}" data-n="${n}"><b>${n}</b><small>${s?esc(s.kind):"Snippet"}</small><div>${s?esc(s.text):"Coming soon…"}</div></div>`;}
+ $("g70").innerHTML=h;if(edit)$("g70").querySelectorAll(".sn").forEach(e=>e.onclick=()=>{const n=+e.dataset.n,s=S.sn[n]||{};$("sNum").textContent="Snippet #"+n;$("sKind").value=s.kind||"Quality";$("sText").value=s.text||"";$("dlg").dataset.n=n;$("dlg").showModal();});}
+function rWish(){chips($("catChips"),[["","All people"],...CATS.map(c=>[c,c])],wc,k=>{wc=k;rWish();});chips($("typeChips"),[["","All types"],["Text","Text"],["Audio","Audio"],["Video","Video"],["Photo","Photo"]],wt,k=>{wt=k;rWish();});
+ const r=S.wish.filter(w=>(!wc||w.cat==wc)&&(!wt||(wt=="Text"?!w.media:mtype(w.media)==wt)));
+ $("wishList").innerHTML=r.length?r.map(w=>`<div class="card"><span class="who">${esc(w.name)}</span><span class="tag">${esc(w.cat||"Other")}</span><span class="tag">${esc(w.lang)}</span><p>${esc(w.text)}</p>${media(w.media)}</div>`).join(""):'<div class="empty">No wishes here yet.</div>';}
+async function init(){
+ $("wCat").innerHTML=CATS.map(c=>`<option>${c}</option>`).join("");rCollage();rTl();r70();rWish();
+ try{const c=window.claude;db=await c.use("db");assets=await c.use("assets");const u=await c.use("user");edit=!!(u&&u.canEdit());}catch(e){}
+ if(edit)document.body.classList.add("canedit");
+ if(!db){return;}
+ const w=(col,ord,fn)=>db.collection(col).orderBy(ord,"desc").onSnapshot(s=>fn(rows(s)),e=>console.error(e));
+ w("collage","ts",r=>{S.col=r;rCollage();});w("timeline","ts",r=>{S.tl=r.sort((a,b)=>String(a.year).localeCompare(String(b.year),undefined,{numeric:true}));rTl();});
+ w("wishes","ts",r=>{S.wish=r;rWish();});db.collection("snippets").onSnapshot(s=>{S.sn={};rows(s).forEach(x=>S.sn[x.n]=x);r70();},e=>console.error(e));
+ bind($("cForm"),async()=>{for(const f of $("cFile").files){const m=await up(f);await db.collection("collage").add({media:m,ts:Date.now()});}});
+ bind($("tlForm"),async()=>{const m=await up($("tFile").files[0]);await db.collection("timeline").add({year:$("tYear").value.trim(),kind:$("tKind").value,title:$("tTitle").value.trim(),text:$("tText").value.trim(),media:m,ts:Date.now()});});
+ bind($("wishForm"),async()=>{const m=await up($("wFile").files[0]);await db.collection("wishes").add({name:$("wName").value.trim(),cat:$("wCat").value,lang:$("wLang").value,text:$("wText").value.trim(),media:m,ts:Date.now()});});
+ $("sForm").addEventListener("submit",async()=>{const n=+$("dlg").dataset.n;try{await db.doc("snippets/s"+n).set({n,kind:$("sKind").value,text:$("sText").value.trim()});}catch(x){alert("Could not save");}});
+}
+
+function boom(){const e=["🎉","🎂","🪔","🌼","✨","🎈","🌸","💛"];for(let i=0;i<36;i++){const s=document.createElement("span");s.className="cf";s.textContent=e[i%e.length];s.style.left=Math.random()*100+"vw";s.style.setProperty("--d",(2.5+Math.random()*2.5)+"s");s.style.setProperty("--x",(Math.random()*160-80)+"px");document.body.appendChild(s);setTimeout(()=>s.remove(),5500);}}
+$("boom").onclick=boom;
+(function(){const c=$("cnt");if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;let n=0;const t=setInterval(()=>{n+=2;if(n>=70){n=70;clearInterval(t);boom();}c.textContent=n;},28);})();
+init();
+</script></body></html>
